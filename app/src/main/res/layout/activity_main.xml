@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.wagnel.tabladeamortizacion.MainActivity">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/prestamo"
+        android:layout_marginTop="10dp"
+        android:layout_centerHorizontal="true"/>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="110dp">
+
+        <TextView
+            android:id="@+id/tvCantPrestada"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginStart="15dp"
+            android:text="@string/tvCantP"
+            android:layout_marginTop="12dp"
+            android:textSize="18sp" />
+        <EditText
+            android:id="@+id/etCantidad"
+            android:layout_width="210dp"
+            android:inputType="numberDecimal"
+            android:layout_marginLeft="5dp"
+            android:layout_marginStart="5dp"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/tvCantPrestada"
+            android:layout_toEndOf="@id/tvCantPrestada"
+            android:hint="0.00"/>
+        <TextView
+            android:id="@+id/tvInteres"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="58dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginStart="15dp"
+            android:textSize="18sp"
+            android:text="Interes: "/>
+        <EditText
+            android:id="@+id/etInteres"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:layout_marginTop="45dp"
+            android:layout_toRightOf="@id/tvInteres"
+            android:layout_toEndOf="@id/tvInteres"
+            android:hint="Ej: 14"/>
+        <TextView
+            android:id="@+id/tvTiempo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="102dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginStart="15dp"
+            android:textSize="18sp"
+            android:text="Tiempo: "/>
+        <EditText
+            android:id="@+id/etTiempo"
+            android:layout_width="100dp"
+            android:inputType="numberDecimal"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="90dp"
+            android:layout_toRightOf="@id/tvTiempo"
+            android:layout_toEndOf="@id/tvTiempo"
+            android:hint="Ej: 60"/>
+
+    </RelativeLayout>
+
+    <ImageButton
+        android:id="@+id/btnCalculate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:background="@android:color/transparent"
+        android:src="@mipmap/calculadora"
+        android:onClick="calcular"/>
+
+</RelativeLayout>
